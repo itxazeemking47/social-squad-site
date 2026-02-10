@@ -1,10 +1,10 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>The Social Squad | Social Media Management</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Segoe+UI&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet" />
 <style>
   /* Root & Reset */
   * {
@@ -20,152 +20,178 @@
   a {
     color: #00bcd4;
     text-decoration: none;
+    transition: 0.3s;
   }
   a:hover {
-    text-decoration: underline;
+    color: #80deea;
   }
   h1, h2, h3 {
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
   }
   h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 0.5rem;
     color: #fff;
+    text-transform: uppercase;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 1rem;
     color: #00bcd4;
   }
   h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #e0e0e0;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    border-left: 4px solid #00bcd4;
+    padding-left: 15px;
   }
   /* Container */
   .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
   }
   /* Header / Hero */
   header {
-    padding: 80px 20px 60px;
+    padding: 100px 20px 80px;
     text-align: center;
+    background: radial-gradient(circle at center, #1e1e1e 0%, #121212 100%);
     border-bottom: 1px solid #333;
   }
   header h1 span.highlight {
     color: #00bcd4;
+    text-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
   }
   header p.lead {
-    font-size: 1.3rem;
-    margin-top: 10px;
-    color: #bbb;
+    font-size: 1.4rem;
+    margin-top: 15px;
+    color: #aaa;
+    letter-spacing: 1px;
   }
   /* Services Section */
   section.services {
-    padding: 60px 0;
-    background-color: #1e1e1e;
+    padding: 80px 0;
+    background-color: #181818;
   }
   ul.service-list {
     list-style: none;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 0;
   }
   ul.service-list li {
     background: #212121;
-    border-radius: 6px;
-    margin: 12px 0;
-    padding: 16px 20px;
-    font-weight: 600;
-    color: #80deea;
-    position: relative;
-    transition: background-color 0.3s ease;
+    border-radius: 12px;
+    margin: 15px 0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid #333;
+    overflow: hidden; /* Ensure link fills the area */
   }
+  ul.service-list li a {
+    display: block;
+    padding: 20px 20px 20px 55px;
+    color: #80deea;
+    font-weight: 700;
+    font-size: 1.2rem;
+    position: relative;
+  }
+  /* Service icons using before */
   ul.service-list li::before {
     content: "🔥";
     position: absolute;
-    left: 15px;
+    left: 20px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    z-index: 1;
+    pointer-events: none;
   }
   ul.service-list li:hover {
-    background-color: #00acc1;
+    transform: scale(1.03);
+    background-color: #00bcd4;
+    border-color: #00bcd4;
+  }
+  ul.service-list li:hover a {
     color: #121212;
-    cursor: default;
   }
   /* Visuals Section */
   section.visuals {
-    padding: 60px 0;
+    padding: 80px 0;
   }
   .visuals-grid {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
   }
   .visuals-grid img {
-    max-width: 320px;
-    max-height: 200px;
-    border-radius: 8px;
-    box-shadow: 0 0 12px rgba(0,188,212,0.6);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #333;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    transition: all 0.4s ease;
   }
   .visuals-grid img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0,188,212,0.9);
+    transform: translateY(-10px);
+    border-color: #00bcd4;
+    box-shadow: 0 0 25px rgba(0,188,212,0.4);
   }
   /* About Section */
   section.about {
     background-color: #1e1e1e;
-    padding: 60px 20px;
+    padding: 60px 40px;
     max-width: 900px;
     margin: 0 auto 80px auto;
-    border-radius: 8px;
-    color: #ccc;
+    border-radius: 20px;
+    border: 1px solid #333;
+    text-align: center;
   }
   section.about p {
-    font-size: 1.15rem;
-    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #bbb;
+    line-height: 1.8;
   }
   /* Slogan */
   .slogan {
     text-align: center;
     font-weight: 700;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     color: #fff;
-    margin: 40px 0 60px 0;
-    text-shadow: 0 0 12px #00bcd4;
+    margin: 40px 0 80px 0;
+    text-shadow: 0 0 15px rgba(0,188,212,0.8);
+    font-family: 'Roboto Mono', monospace;
   }
   /* Footer */
   footer {
-    background-color: #121212;
-    padding: 20px;
+    background-color: #0a0a0a;
+    padding: 40px 20px;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     border-top: 1px solid #333;
   }
   footer a {
     color: #00bcd4;
     font-weight: 700;
+    border-bottom: 2px solid transparent;
+  }
+  footer a:hover {
+    border-bottom: 2px solid #00bcd4;
+    text-decoration: none;
   }
   /* Responsive */
-  @media(max-width: 680px) {
-    .visuals-grid {
-      flex-direction: column;
-      align-items: center;
-    }
-    ul.service-list li {
-      font-size: 1.1rem;
-      padding-left: 45px;
-    }
+  @media(max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+    header { padding: 60px 20px; }
   }
 </style>
 </head>
 <body>
+
 <header>
   <div class="container">
     <h1>WANT MORE SALES?</h1>
@@ -178,11 +204,16 @@
   <div class="container">
     <h3 id="services-heading">Our Key Services</h3>
     <ul class="service-list">
-  <li><a href="viral-strategies.html" style="color: inherit; text-decoration: none;">Viral Content Strategies</a></li>
-  <li>Data-Driven Growth</li>
-  <li>Stunning Visuals</li>
+      <li style="position: relative;">
+        <a href="viral-strategies.html">Viral Content Strategies</a>
+      </li>
+      <li style="position: relative;">
+        <a href="#">Data-Driven Growth</a>
+      </li>
+      <li style="position: relative;">
+        <a href="#">Stunning Visuals</a>
+      </li>
     </ul>
-    
   </div>
 </section>
 
@@ -190,9 +221,9 @@
   <div class="container">
     <h3>Stunning Visuals Showcase</h3>
     <div class="visuals-grid">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=320&q=80" alt="Creative social media graphic 1" />
-      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=320&q=80" alt="Creative social media graphic 2" />
-      <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=320&q=80" alt="Creative social media graphic 3" />
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Creative social media graphic 1" />
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Creative social media graphic 2" />
+      <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=600&q=80" alt="Creative social media graphic 3" />
     </div>
   </div>
 </section>
@@ -213,4 +244,5 @@
 </footer>
 
 </body>
-</html>
+      </html>
+  
